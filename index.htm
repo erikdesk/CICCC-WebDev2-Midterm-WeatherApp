@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desk Weather Adventure</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./components/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo"></div>
+      <div id="name"></div>
+    </header>
+    <main>
+      <div id="main_home" class="main show">
+        <div id="home-container">
+          <div id="image"></div>
+          <div id="home-card" class="card bg-light">
+            <div class="card-header">
+              <p>Temperature:</p>
+              <p id="temp"></p>
+              <br />
+              <p>Feels-like:</p>
+              <p id="feels-like"></p>
+            </div>
+            <div class="card-body">
+              <p id="clouds-description"></p>
+              <br />
+              <p>Wind Speed:</p>
+              <p id="wind-speed"></p>
+              <br />
+              <p>Rain:</p>
+              <p id="rain"></p>
+              <br />
+              <p>Snow:</p>
+              <p id="snow"></p>
+              <br />
+              <p>AQI:</p>
+              <p id="aqi"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main_temperature" class="main hide">
+        <div id="chart_temperature"></div>
+      </div>
+      <div id="main_rainsnow" class="main hide">
+        <div id="chart_rainsnow"></div>
+      </div>
+      <div id="main_pollution" class="main hide">
+        <div id="chart_pollution"></div>
+      </div>
+      <div id="main_searchbox" class="main hide">
+        <div id="selection"></div>
+      </div>
+    </main>
+    <aside>
+      <div id="aside_home" class="aside show">
+        details of all data summarized...
+      </div>
+      <div id="aside_temperature" class="aside hide">
+        details of temperature data...
+      </div>
+      <div id="aside_rainsnow" class="aside hide">
+        details of rain and snow data...
+      </div>
+      <div id="aside_pollution" class="aside hide">
+        details of pollution data...
+      </div>
+      <div id="aside_searchbox" class="aside hide">
+        <input
+          id="input"
+          class="form-control"
+          type="text"
+          autocomplete="off"
+          required
+          placeholder="Find a city..."
+          value=""
+        />
+      </div>
+    </aside>
+    <nav>
+      <div id="nav_home" class="nav-button nav-button-selected btn btn-primary">
+        <p>🏠&nbsp;&nbsp;home</p>
+      </div>
+      <div id="nav_temperature" class="nav-button btn btn-dark">
+        <p>🌡&nbsp;&nbsp;temperature</p>
+      </div>
+      <div id="nav_rainsnow" class="nav-button btn btn-dark">
+        <p>💧&nbsp;&nbsp;rain&nbsp;&nbsp;❆&nbsp;&nbsp;snow</p>
+      </div>
+      <div id="nav_pollution" class="nav-button btn btn-dark">
+        <p>💨&nbsp;&nbsp;pollution</p>
+      </div>
+      <div id="nav_searchbox" class="nav-button btn btn-dark">
+        <p>🗺&nbsp;&nbsp;city</p>
+      </div>
+    </nav>
+    <footer><p>2021 © Desk Weather Adventure™</p></footer>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript" src="./components/script/index.js"></script>
+  </body>
+</html>
